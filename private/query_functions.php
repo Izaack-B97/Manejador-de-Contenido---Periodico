@@ -10,6 +10,28 @@ function find_all_articulos(){
 	return $result;
 }
 
+function insert_articulo($articulo){
+	global $db;
+
+	$sql = "INSERT INTO articulos(titulo, noticia, update_at) ";
+	$sql .= "VALUES (";
+	$sql .= "'". $articulo['titulo'] ."', ";
+	$sql .= "'". $articulo['noticia'] ."', ";
+	$sql .= "CURRENT_TIMESTAMP";
+	$sql .= ")";
+
+	$result = mysqli_query($db, $sql);
+	// For INSERT statements, $result is true/false
+	if ($result) {
+		return true;
+	} else {
+		// INSERT failed
+		echo mysqli_error($db);
+		db_discconect($db);
+		exit();
+	}
+}	
+
 // ***Todo el rollo de los subjects
 
 function find_all_subjects(){

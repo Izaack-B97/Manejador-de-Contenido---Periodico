@@ -10,13 +10,13 @@
 
 <br>
 <h3>Listado de Articulos</h3>
-<button type="button" class="btn btn-success mt-2 mb-5" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Crear Articulo</button>
+<a class="btn btn-success mt-2 mb-4" href="<?php echo url_for('/staff/articulos/new.php')?>">Crear Art&iacute;culo</a>
 
 <div id="content-articulos" class="content">
 <table class="table table-bordered table-hover table-sm" style="width:88%;">
-  <thead>
+  <thead class="text-center">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col" class="text-left">#</th>
       <th scope="col">T&iacute;tulo</th>
       <th scope="col">Actualizaci&oacute;n</th>
       <th scope="col" class="text-right">Operaciones
