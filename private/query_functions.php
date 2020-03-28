@@ -1,5 +1,15 @@
 <?php
 
+//** TODO EL ROLLO PARA ARTICULOS */
+function find_all_articulos(){
+	global $db;
+	$sql = "SELECT * FROM articulos ";
+	$sql .= "ORDER BY id ASC";
+	$result = mysqli_query($db,$sql);
+	confirm_result_set($result);
+	return $result;
+}
+
 // ***Todo el rollo de los subjects
 
 function find_all_subjects(){
