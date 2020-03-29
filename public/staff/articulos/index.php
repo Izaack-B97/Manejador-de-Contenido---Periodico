@@ -31,7 +31,7 @@
             <td class="text-center"><?php echo h($articulo['titulo']); ?></td>
             <td class="text-center"><?php echo h($articulo['update_at']); ?></td>
             <td class="text-right">
-            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="right"    title="">Ver</button>
+            <a href="<?php echo url_for('/staff/articulos/show.php?id=' . h($articulo['id'])); ?>" role="button" class="btn btn-outline-primary">Ver</a>
             <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="right"    title="">Editar</button>
             <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="right"    title="">Eliminar</button>
             </td>

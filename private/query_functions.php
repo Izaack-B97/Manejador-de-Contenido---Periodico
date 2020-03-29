@@ -1,6 +1,18 @@
 <?php
 
 //** TODO EL ROLLO PARA ARTICULOS */
+
+function find_articulo_by_id($id){
+	global $db;
+	$sql = "SELECT * FROM articulos ";
+	$sql .= "WHERE id='" . $id . "' ";
+	$result_set = mysqli_query($db, $sql);
+	confirm_result_set($result_set);
+	$articulo = mysqli_fetch_assoc($result_set);
+	mysqli_free_result($result_set);
+	return $articulo;
+}
+
 function find_all_articulos(){
 	global $db;
 	$sql = "SELECT * FROM articulos ";
