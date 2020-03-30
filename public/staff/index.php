@@ -32,12 +32,12 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="<?php echo url_for('/images/carrusel-noticia-1.png'); ?>" alt="First slide">
+          <img class="d-block w-100" src="<?php echo url_for('/images/carrusel-noticia-4.png'); ?>" alt="First slide">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Buque hospital arriba a Nueva York para atender a infectados por coronavirus
-              <a class="stretched-link" href="https://www.elimparcial.com/mundo/Buque-hospital-arriba-a-Nueva-York-para-atender-a-infectados-por-coronavirus-20200330-0080.html"></a>
+            <h5>Carlos Urzúa prevé que economía de México caerá más del 6% por COVID-19
+              <a class="stretched-link" href="https://www.elimparcial.com/dinero/Carlos-Urzua-preve-que-economia-de-Mexico-caera-mas-del-6-por-COVID-19-20200330-0091.html"></a>
             </h5>
-            <p>El USNS Comfort cuenta con mil camas y una tripulación de mil 200 personas entre médicos, enfermeras, técnicos y marineros.</p>
+            <p>El exsecretario advirtió que la caída del PIB a raíz del coronavirus,  superará las grandes crisis de las últimas décadas.</p>
           </div>
         </div>
         <div class="carousel-item">
@@ -72,58 +72,25 @@
     
     <br>
 
-     <!-- START CARDS NOTICES -->
-     <div class="px-1 text-center">
+    <h2>Noticias recientes</h2>
+    <!-- START CARDS NOTICES -->
+    <div class="pl-5 text-center row">
 
         <?php while($noticia = mysqli_fetch_assoc($noticias)){?>
-          <div class="card d-inline-block" style="width: 15rem;">
-          <img class="card-img-top" src="" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Preguntas y respuestas sobre el coronavirus</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis reiciendis voluptatibus delectus, vel exercitationem?  </p>
-            <a href="#" class="btn btn-primary">Leer Articulo</a>
+          <div class="card mt-2 mx-2" style="width: 15rem;">
+            <img class="card-img-top" src="data:image/jpg;base64,<?php echo base64_encode($noticia['foto']) ;?>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $noticia['titulo']; ?></h5>
+              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis reiciendis voluptatibus delectus, vel exercitationem?  </p> -->
+              <a href="<?php echo url_for('/staff/articulos/show.php?id=' . h($noticia['id'])); ?>" class="btn btn-primary">Leer Articulo</a>
+            </div>
           </div>
-        </div>
         <?php } ?>
-
-
-        <!-- <div class="card d-inline-block" style="width: 15rem;">
-          <img class="card-img-top" src="<?php echo url_for('/images/noticia-card2.png'); ?>" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Cómo evitar contagios de coronavirus durante trayectos viales necesarios</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis reiciendis  </p>
-            <a href="#" class="btn btn-primary">Leer Articulo</a>
-          </div>
-        </div>
-
-        <div class="card d-inline-block" style="width: 15rem;">
-          <img class="card-img-top" src="<?php echo url_for('/images/noticia-card3.png'); ?>" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Higiene al llegar a casa es lo más efectivo contra el Covid-19</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis reiciendis voluptatibus </p>
-            <a href="#" class="btn btn-primary">Leer Articulo</a>
-          </div>
-        </div>
-      </div> -->
 
     </div>
   <!-- END CARDS NOTICES -->
 
   <br>
-
-
-
-    <br>
-
-    <!-- Start Noticia Reciente -->
-    <h2>Medidas contra el COVID-19 afectan de forma desproporcionada a mexicanas</h2>
-    <p class="text-justify lead">Feministas pidieron al Gobierno incluir perspectiva de género en las políticas de quedarse en casa y de atención a grupos vulnerables.</p>
-    <img src="<?php echo url_for('/images/noticia-new.png'); ?>" alt="Noticia reciente" style="width:100%;">
-    <!-- End Noticia Reciente -->
-    
-    <br><br>
-
-   
 
   <div class="list-group">
     <a href="https://www.elimparcial.com/estilos/Como-detectar-a-un-enfermo-de-coronavirus-en-casa-20200330-0046.html" class="list-group-item list-group-item-action flex-column align-items-start active" id="d">
@@ -137,6 +104,13 @@
 
   <br>
 
+  <!-- Start Noticia Reciente -->
+  <h2>Medidas contra el COVID-19 afectan de forma desproporcionada a mexicanas</h2>
+  <p class="text-justify lead">Feministas pidieron al Gobierno incluir perspectiva de género en las políticas de quedarse en casa y de atención a grupos vulnerables.</p>
+  <img src="<?php echo url_for('/images/noticia-new.png'); ?>" alt="Noticia reciente" style="width:100%;">
+  <!-- End Noticia Reciente -->
+    
+  <br><br>
   <P class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo pariatur repellat molestias soluta ipsum autem officiis reprehenderit vero placeat, vitae neque quaerat voluptate ad delectus fugiat! Eius eaque inventore a!</P>
 
 </div>
