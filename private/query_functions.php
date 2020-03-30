@@ -31,6 +31,7 @@ function update_articulo($articulo){
 	$sql = "UPDATE articulos SET ";
 	$sql .= "titulo='" . $articulo['titulo'] . "', ";
 	$sql .= "noticia='" . $articulo['noticia'] . "', ";
+	$sql .= "foto='" . $articulo['foto'] . "', ";
 	$sql .= "update_at=CURRENT_TIMESTAMP ";
 	$sql .= "WHERE id='" . $articulo['id'] . "' ";
 	$sql .= "LIMIT 1";
@@ -70,10 +71,11 @@ function find_all_articulos(){
 function insert_articulo($articulo){
 	global $db;
 
-	$sql = "INSERT INTO articulos(titulo, noticia, update_at) ";
+	$sql = "INSERT INTO articulos(titulo, noticia, foto,update_at) ";
 	$sql .= "VALUES (";
 	$sql .= "'". $articulo['titulo'] ."', ";
 	$sql .= "'". $articulo['noticia'] ."', ";
+	$sql .= "'". $articulo['foto'] ."', ";
 	$sql .= "CURRENT_TIMESTAMP";
 	$sql .= ")";
 

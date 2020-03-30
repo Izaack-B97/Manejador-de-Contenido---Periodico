@@ -25,15 +25,11 @@
                 <textarea name="noticia" id="textA-Noticia" cols="" rows="10" class="form-control" placeholder="Escriba su historia porfavor . . ." disabled><?php echo $articulo['noticia']; ?></textarea>
             </div>
         </div>
-        <!-- <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Imagen del art&iacute;culo</span>
+        <div class="form-group row">
+            <div class="col-sm-12 text-center">
+                <img height="500px" src="data:image/jpg;base64,<?php echo base64_encode($articulo['foto']) ?>" alt="">
             </div>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile01">
-                <label class="custom-file-label" for="inputGroupFile01">Elegir</label>
-            </div>
-        </div> -->
+        </div>
     </form>    
 </div>
 
