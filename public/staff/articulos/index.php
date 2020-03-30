@@ -32,7 +32,7 @@
             <td class="text-center"><?php echo h($articulo['update_at']); ?></td>
             <td class="text-right">
             <a href="<?php echo url_for('/staff/articulos/show.php?id=' . h($articulo['id'])); ?>" role="button" class="btn btn-outline-primary">Ver</a>
-            <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="right"    title="">Editar</button>
+            <a href="<?php echo url_for('/staff/articulos/edit.php?id=' . h($articulo['id'])); ?>" role="button" class="btn btn-outline-success">Editar</a>
             <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="right"    title="">Eliminar</button>
             </td>
         </tr>

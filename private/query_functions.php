@@ -2,6 +2,28 @@
 
 //** TODO EL ROLLO PARA ARTICULOS */
 
+function update_articulo($articulo){
+	global $db;
+
+	$sql = "UPDATE articulos SET ";
+	$sql .= "titulo='" . $articulo['titulo'] . "', ";
+	$sql .= "noticia='" . $articulo['noticia'] . "', ";
+	$sql .= "update_at=CURRENT_TIMESTAMP ";
+	$sql .= "WHERE id='" . $articulo['id'] . "' ";
+	$sql .= "LIMIT 1";
+
+	$result = mysqli_query($db, $sql);
+	// for UPDATE statements, $result is true/false
+	if ($result) {
+		return true;
+	} else {
+	  //UPDATE failed
+	  echo mysqli_error($db);
+	  db_disconnect($db);
+	  exit;
+	}
+}
+
 function find_articulo_by_id($id){
 	global $db;
 	$sql = "SELECT * FROM articulos ";
