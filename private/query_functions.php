@@ -2,6 +2,29 @@
 
 //** TODO EL ROLLO PARA ARTICULOS */
 
+function delete_articulo($id){
+	global $db;
+
+	$sql = "DELETE FROM articulos ";
+    $sql .= "WHERE id='" . $id . "' ";
+	$sql .= "LIMIT 1";
+
+	// echo $sql;
+
+    $result = mysqli_query($db, $sql);
+	return $result;
+	// // For DELETE statements, $result is true/false
+    // if ($result) {
+    //     redirect_to(url_for('/staff/pages/index.php'));
+    // } else {
+    //     //DELETE failed
+    //     echo mysqli_error($db);
+    //     db_disconnect($db);
+    //     exit;
+    // }
+}
+
+
 function update_articulo($articulo){
 	global $db;
 

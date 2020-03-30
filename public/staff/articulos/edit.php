@@ -1,6 +1,6 @@
 <?php require_once('../../../private/initialize.php'); ?>
 
-<?php $page_title = 'Editar Articulo'; ?>
+<?php $page_title = 'Editar Noticia'; ?>
 <!-- Importamos el header con sus respectivas funciones -->
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
