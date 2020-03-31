@@ -81,7 +81,8 @@
             <img class="card-img-top" src="data:image/jpg;base64,<?php echo base64_encode($noticia['foto']) ;?>" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title"><?php echo $noticia['titulo']; ?></h5>
-              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis reiciendis voluptatibus delectus, vel exercitationem?  </p> -->
+              <!-- <small class="text-muted card-text"><?php echo date('m/d/Y', strtotime($noticia['update_at'])); ?></small> -->
+              <p class="card-text text-muted"><?php echo date('m/d/Y', strtotime($noticia['update_at'])); ?></p>
               <a href="<?php echo url_for('/staff/articulos/show.php?id=' . h($noticia['id'])); ?>" class="btn btn-primary">Leer Articulo</a>
             </div>
           </div>

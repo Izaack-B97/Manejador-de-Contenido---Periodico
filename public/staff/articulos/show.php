@@ -11,8 +11,31 @@
 
 <h2>Articulo - <?php echo $articulo['id']; ?></h2>
 <a class="back-link" href="<?php echo url_for('/staff/articulos/index.php'); ?>">&laquo; Regresar a la lista</a>
+<h1><?php echo $articulo['titulo']; ?></h1>
+<div class="row">
+    <div class="col-offset-1 col-sm-10">
+        <span class="text-muted">
+            Redactado por Isaac Bustamante
+            <br>
+            <?php echo date("d/m/Y", strtotime($articulo['update_at'])); ?>
+        </span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-11">
+        <img class="mt-4" style="width:97%" height="500px" src="data:image/jpg;base64,<?php echo base64_encode($articulo['foto']) ?>" alt="">  
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-11">
+        <p class="lead mt-5">
+            <?php echo $articulo['noticia']; ?>
+        </p>
+    </div>
+</div>
+
 <div id="area-detalles" class="mt-4">
-    <form method="GET">
+    <!-- <form method="GET">
         <div class="form-group row">
             <label for="inputTitulo" class="col-sm-2 col-form-label">Titulo</label>
             <div class="col-sm-5">
@@ -30,7 +53,7 @@
                 <img height="500px" src="data:image/jpg;base64,<?php echo base64_encode($articulo['foto']) ?>" alt="">
             </div>
         </div>
-    </form>    
+    </form>     -->
 </div>
 
 <!-- Importamos el footer con sus funciones cargadas -->

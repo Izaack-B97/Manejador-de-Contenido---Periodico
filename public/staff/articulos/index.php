@@ -29,7 +29,7 @@
         <tr>
             <td scope="row"><?php echo h($articulo['id']); ?></td>
             <td class="text-center"><?php echo h($articulo['titulo']); ?></td>
-            <td class="text-center"><?php echo date("m/d/Y", strtotime(h($articulo['update_at']))); ?></td>
+            <td class="text-center"><?php echo date("H:ma - d/m/Y", strtotime(h($articulo['update_at']))); ?></td>
             <td class="text-right">
             <a href="<?php echo url_for('/staff/articulos/show.php?id=' . h($articulo['id'])); ?>" role="button" class="btn btn-outline-primary">Ver</a>
             <a href="<?php echo url_for('/staff/articulos/edit.php?id=' . h($articulo['id'])); ?>" role="button" class="btn btn-outline-success">Editar</a>
