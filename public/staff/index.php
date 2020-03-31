@@ -16,7 +16,7 @@
       <h4 class="navbar-brand">Inicio</h3>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="<?php echo url_for('/staff/subjects/index.php'); ?>">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
           <li class="nav-item"><a class="nav-link" href="<?php echo  url_for('/staff/articulos/index.php'); ?>">Articulos</a></li>
         </ul>
       </div>
@@ -81,7 +81,7 @@
             <img class="card-img-top" src="data:image/jpg;base64,<?php echo base64_encode($noticia['foto']) ;?>" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title"><?php echo $noticia['titulo']; ?></h5>
-              <!-- <small class="text-muted card-text"><?php echo date('m/d/Y', strtotime($noticia['update_at'])); ?></small> -->
+              <!-- <small class="text-muted card-text"><?php echo date('d/m/Y', strtotime($noticia['update_at'])); ?></small> -->
               <p class="card-text text-muted"><?php echo date('m/d/Y', strtotime($noticia['update_at'])); ?></p>
               <a href="<?php echo url_for('/staff/articulos/show.php?id=' . h($noticia['id'])); ?>" class="btn btn-primary">Leer Articulo</a>
             </div>
